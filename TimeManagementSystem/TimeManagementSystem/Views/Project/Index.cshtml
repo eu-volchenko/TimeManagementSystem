@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TimeManagementSystem.WebUI.Models.ProjectViewModel>
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>List of products: @Model.Count()</h2>
+
+<div class="content">
+    <div class="items">
+        @foreach (var item in Model)
+        {
+            <div class="project" style="border:solid 2px black">
+
+                <p style="font-size: 18px;" align="center">@Html.DisplayFor(modelItem => item.Abbreviations, new { style = "font: 18px 'Bradley Hand', cursive;" })</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Name, new { style = "font: 14px 'Bradley Hand', cursive;" })</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Description, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Efforts, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.InitialDate, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Milestones, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Timeline, new { style = "font: 14px 'Bradley Hand', cursive;" })</p>
+            </div>
+
+                <hr />
+        }
+
+
+    </div>
+</div>

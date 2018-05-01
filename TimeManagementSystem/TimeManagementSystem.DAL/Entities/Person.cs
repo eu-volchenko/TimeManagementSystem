@@ -22,7 +22,7 @@ namespace TimeManagementSystem.DAL.Entities
         [StringLength(20)]
         public string Name { get; set; }
 
-        [Required]
+
         [StringLength(30)]
         public string Surname { get; set; }
 
@@ -34,6 +34,8 @@ namespace TimeManagementSystem.DAL.Entities
         public string Phone { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Teammate> Teammates { get; set; }
+        public virtual ICollection<Teammate> Teammates { get; set; }    
+        
+        public virtual User User { get; set; }
     }
 }

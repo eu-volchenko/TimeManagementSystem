@@ -10,5 +10,9 @@ namespace TimeManagementSystem.BLL.Interfaces
     public interface IProjectService
     {
         void AddProject(ProjectDTO project);
+        IEnumerable<ProjectDTO> ShowAllProjects();
+        void AddUsers(PersonDTO person, ProjectDTO project);
+        void Edit(ProjectDTO project);
+        ProjectDTO Find(int id);
     }
 }

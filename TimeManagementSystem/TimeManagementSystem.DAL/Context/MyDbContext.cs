@@ -13,6 +13,10 @@ namespace TimeManagementSystem.DAL
         {
         }
 
+        public MyDbContext():base("name=DbContext")
+        {
+        }
+
         public virtual DbSet<Activity> Activities { get; set; }
         public virtual DbSet<ActivitiesInProject> ActivitiesInProjects { get; set; }
         public virtual DbSet<Person> People { get; set; }
@@ -23,6 +27,7 @@ namespace TimeManagementSystem.DAL
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<Teammate> Teammates { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

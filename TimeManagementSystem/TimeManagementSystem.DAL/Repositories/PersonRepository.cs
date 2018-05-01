@@ -31,7 +31,8 @@ namespace TimeManagementSystem.DAL.Repositories
 
         public Person Get(Func<Person, bool> filter)
         {
-            return db.People.Find(filter);
+           var a = db.People.Where(filter);
+            return a.FirstOrDefault();
         }
 
         public IEnumerable<Person> GetAll()

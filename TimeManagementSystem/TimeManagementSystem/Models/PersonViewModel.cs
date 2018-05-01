@@ -1,17 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace TimeManagementSystem.BLL.DTO
+namespace TimeManagementSystem.Models
 {
-    public class PersonDTO
+    public class PersonViewModel
     {
         public int Id { get; set; }
+
+        
         public string Name { get; set; }
+
+       
         public string Surname { get; set; }
+
+       
         public string Email { get; set; }
+
+       
         public string Phone { get; set; }
     }
 }

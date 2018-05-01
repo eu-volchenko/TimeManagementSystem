@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace TimeManagementSystem.DAL.Repositories
         private StatusRepository _statusRepository;
         private TaskRepository _taskRepository;
         private TeammateRepository _teammateRepository;
+        private UserRepository _userRepository;
+       
 
         public UnitOfWork(string connectionString)
         {
@@ -108,6 +111,14 @@ namespace TimeManagementSystem.DAL.Repositories
             }
         }
 
+        public IRepository<User> Users
+        {
+            get
+            {
+                return (_userRepository == null) ? (_userRepository = new UserRepository(_db)) : _userRepository;
+            }
+        }
+
         private bool disposed = false;
 
         public virtual void Dispose(bool disposing)
@@ -132,5 +143,7 @@ namespace TimeManagementSystem.DAL.Repositories
         {
             _db.SaveChanges();
         }
+
+       
     }
 }

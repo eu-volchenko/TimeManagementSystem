@@ -30,7 +30,8 @@ namespace TimeManagementSystem.DAL.Repositories
 
         public Project Get(Func<Project, bool> filter)
         {
-            return db.Projects.Find(filter);
+            IEnumerable<Project> project = db.Projects.Where(filter);
+            return project.FirstOrDefault();
         }
 
         public IEnumerable<Project> GetAll()

@@ -1,4 +1,4 @@
-﻿@model TimeManagementSystem.WebUI.Models.ProjectViewModel
+﻿@model TimeManagementSystem.Models.ProjectViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -26,10 +26,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Abbreviations, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Abbreviation, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Abbreviations, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Abbreviations, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Abbreviation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Abbreviation, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -42,26 +42,26 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Efforts, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.InitialEffort, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Efforts, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Efforts, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.InitialEffort, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InitialEffort, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Timeline, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.InitialTimeLine, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Timeline, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Timeline, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.InitialTimeLine, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InitialTimeLine, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Milestones, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.InitialMilestones, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Milestones, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Milestones, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.InitialMilestones, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InitialMilestones, "", new { @class = "text-danger" })
             </div>
         </div>
 

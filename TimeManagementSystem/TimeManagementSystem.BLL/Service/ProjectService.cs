@@ -22,6 +22,16 @@ namespace TimeManagementSystem.BLL.Service
             Database = UoW;
         }
 
+        public IEnumerable<ProjectDTO> ShowAllProjects()
+        {
+            var mapper = new MapperConfiguration(cfg => {
+                cfg.CreateMap<ProjectDTO, Project>();
+                cfg.CreateMap<Project, ProjectDTO>();
+            }).CreateMapper();
+            var ListOfProjects = mapper.Map<IEnumerable<Project>, List<ProjectDTO>>(Database.Projects.GetAll());
+            return ListOfProjects;
+        }
+
         public void Edit(ProjectDTO project)
         {
             try
@@ -80,6 +90,16 @@ namespace TimeManagementSystem.BLL.Service
             {
                 throw;
             }
+        }
+
+        public ProjectDTO Find(int id)
+        {
+            Project project = Database.Projects.Get(x=>x.Id == id);
+            var mapper = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Project, ProjectDTO>();
+            }).CreateMapper();
+            return mapper.Map<Project, ProjectDTO>(project);
         }
     }
 }

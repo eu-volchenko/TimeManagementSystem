@@ -19,6 +19,7 @@ namespace TimeManagementSystem.DAL.Interfaces
         IRepository<Status> Statuses { get; }
         IRepository <Entities.Task> Tasks { get; }
         IRepository <Teammate> Teammates { get; }
+        IRepository<User> Users { get; }
 
         void Save();
     }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TimeManagementSystem.WebUI.Models.ProjectViewModel>
+﻿@model IEnumerable<TimeManagementSystem.Models.ProjectViewModel>
 @{
     ViewBag.Title = "Products";
 }
@@ -11,13 +11,14 @@
         {
             <div class="project" style="border:solid 2px black">
 
-                <p style="font-size: 18px;" align="center">@Html.DisplayFor(modelItem => item.Abbreviations, new { style = "font: 18px 'Bradley Hand', cursive;" })</p>
+                <p style="font-size: 18px;" align="center">@Html.DisplayFor(modelItem => item.Abbreviation, new { style = "font: 18px 'Bradley Hand', cursive;" })</p>
                 <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Name, new { style = "font: 14px 'Bradley Hand', cursive;" })</p>
                 <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Description, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
-                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Efforts, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.InitialEffort, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
                 <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.InitialDate, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
-                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Milestones, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
-                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.Timeline, new { style = "font: 14px 'Bradley Hand', cursive;" })</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.InitialMilestones, new {style = "font: 14px 'Bradley Hand', cursive;"})</p>
+                <p style="font-size: 14px;"> @Html.DisplayFor(modelItem => item.InitialTimeLine, new { style = "font: 14px 'Bradley Hand', cursive;" })</p>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id})
             </div>
 
                 <hr />
